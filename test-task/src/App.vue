@@ -1,0 +1,126 @@
+<template>
+  <div id="app">
+<!--      <HotelDatePicker v-model="date" format="DD/MM/YYYY"> </HotelDatePicker>-->
+<!--      <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore, et!</p>-->
+
+      <ListCars :cars="cars"> </ListCars>
+  </div>
+</template>
+
+<script>
+  import ListCars from "./components/ListCars.vue";
+// import HotelDatePicker from 'vue-hotel-datepicker'
+export default {
+  name: 'App',
+  components: {
+    ListCars
+  },
+  data () {
+    return {
+      cars: [
+        {
+          id: 1,
+          image: 'https://bmw.kharkov.ua/files/images/units/big/bmw-x2.png',
+          startDate: '12.06.2020',
+          finalDate:'20.07.2020',
+          description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempom',
+          price: 350,
+          number: 12345,
+          model: 'BMW-X2',
+          transmission: 'automatic',
+          color: 'yellow',
+          available: true
+        },
+        {
+          id: 2,
+          image: 'https://bmw.kharkov.ua/files/images/units/big/WB_bmw-x4.png',
+          startDate: '23.09.2020',
+          finalDate:'20.11.2020',
+          title: 'Item - 2',
+          description: 'Totam rem aperiam, eaque ipsa quae ab illo inventore i  beatae vitae dicta sunt explicabo.',
+          price: 270,
+          number: 14975,
+          model: 'BMW-X4',
+          transmission: 'automatic',
+          color: 'red',
+          available: true
+        },
+        {
+          id: 3,
+          image: 'https://bmw.kharkov.ua/files/images/units/big/j1_bmw-x3.png',
+          startDate: '01.03.2020',
+          finalDate:'18.07.2020',
+          title: 'Item - 3',
+          description: 'Totam rem aperiam, eaque ipsa quae ab illo inventore i  beatae vitae dicta sunt explicabo.',
+          price: 500,
+          number: 19975,
+          model: 'BMW-X3',
+          transmission: 'automatic',
+          color: 'blue',
+          available: false
+        },
+        {
+          id: 4,
+          image: 'https://bmw.kharkov.ua/files/images/units/big/bmw-x7.png',
+          startDate: '29.12.2020',
+          finalDate:'21.01.2021',
+          title: 'Item - 4',
+          description: 'Totam rem aperiam, eaque ipsa quae ab illo inventore i  beatae vitae dicta sunt explicabo.',
+          price: 230,
+          number: 17975,
+          model: 'BMW-X7',
+          transmission: 'automatic',
+          color: 'black',
+          available: true
+        },
+        {
+          id: 5,
+          image: 'https://bmw.kharkov.ua/files/images/units/big/bmw-x5.png',
+          startDate: '01.03.2020',
+          finalDate:'21.05.2020',
+          title: 'Item -52',
+          description: 'Totam rem aperiam, eaque ipsa quae ab illo inventore i  beatae vitae dicta sunt explicabo.',
+          price: 698,
+          number: 87475,
+          model: 'BMW-X5',
+          transmission: 'automatic',
+          color: 'brown',
+          available: true
+        },
+        {
+          id: 6,
+          image: 'https://bmw.kharkov.ua/files/images/units/big/bmw-x6.png',
+          startDate: '03.05.2020',
+          finalDate:'21.06.2020',
+          title: 'Item -52',
+          description: 'Totam rem aperiam, eaque ipsa quae ab illo inventore i  beatae vitae dicta sunt explicabo.',
+          price: 698,
+          number: 87475,
+          model: 'BMW-X6',
+          transmission: 'automatic',
+          color: 'brown',
+          available: true
+        }
+      ]
+    }
+  }
+
+  // components: {
+  //   HotelDatePicker
+  // },
+  // data() {
+  //   return {
+  //     date: new Date(),
+  //     format: 'DD/MM/YYYY'
+  //     }
+  //   }
+}
+
+
+</script>
+
+<style>
+#app {
+
+}
+</style>

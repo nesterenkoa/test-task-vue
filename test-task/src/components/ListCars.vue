@@ -36,6 +36,8 @@
 </template>
 
 <script>
+  // import Cars  from './data/cars.js';
+
   export default {
     name: "ListCars",
     props:[ 'cars' ]

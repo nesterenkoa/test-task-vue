@@ -9,8 +9,11 @@
   },
   "dependencies": {
     "core-js": "^3.6.4",
+    "moment": "^2.26.0",
+    "moment-range": "^4.0.2",
     "vue": "^2.6.11",
-    "vue-hotel-datepicker": "^3.0.5"
+    "vue-hotel-datepicker": "^3.0.5",
+    "vue2-datepicker": "^3.5.0"
   },
   "devDependencies": {
     "@vue/cli-plugin-babel": "~4.3.0",

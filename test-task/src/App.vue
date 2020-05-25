@@ -23,7 +23,6 @@
 </template>
 
 <script>
-  // import ListCars from "./components/ListCars.vue";
   import TableCars from './components/TableCars.vue';
   import DatePicker from 'vue2-datepicker';
   import 'vue2-datepicker/index.css';
@@ -56,6 +55,7 @@
       }
     },
     watch: {
+      months: (currentMonths) => console.log({ currentMonths }),
       range: function (current) {
         const startDate = current[0];
         const endDate = current[1];
@@ -70,8 +70,9 @@
         this.months = {};
 
         const daysObjects = Array.from(range.by('days'));
+
         daysObjects.forEach(d => {
-          const day = d.format('DD');
+          const day = d.format('D');
           const month = d.format('MMM');
 
           if (!this.months[month]) {

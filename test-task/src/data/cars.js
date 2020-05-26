@@ -1,22 +1,33 @@
+import moment from 'moment';
+
 export default [
   {
     id: 1,
     image: 'https://bmw.kharkov.ua/files/images/units/big/bmw-x2.png',
-    startDate: '12.06.2020',
-    finalDate:'20.07.2020',
     description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempom',
     price: 350,
     number: 12345,
     model: 'BMW-X2',
     transmission: 'automatic',
     color: 'yellow',
-    available: true
+    orders: [
+      {
+        id: '0',
+        startDate: moment(),
+        endDate: moment().add(1, 'days'),
+        status: 'reserved'
+      },
+      {
+        id: '1',
+        startDate: moment().add(10, 'days'),
+        endDate: moment().add(15, 'days'),
+        status: 'completed'
+      }
+    ]
   },
   {
     id: 2,
     image: 'https://bmw.kharkov.ua/files/images/units/big/WB_bmw-x4.png',
-    startDate: '23.09.2020',
-    finalDate:'20.11.2020',
     title: 'Item - 2',
     description: 'Totam rem aperiam, eaque ipsa quae ab illo inventore i  beatae vitae dicta sunt explicabo.',
     price: 270,
@@ -24,13 +35,24 @@ export default [
     model: 'BMW-X4',
     transmission: 'automatic',
     color: 'red',
-    available: true
+    orders: [
+      {
+        id: '2',
+        startDate: moment(),
+        endDate: moment().add(1, 'days'),
+        status: 'reserved'
+      },
+      {
+        id: '3',
+        startDate: moment().add(10, 'days'),
+        endDate: moment().add(15, 'days'),
+        status: 'completed'
+      }
+    ]
   },
   {
     id: 3,
     image: 'https://bmw.kharkov.ua/files/images/units/big/j1_bmw-x3.png',
-    startDate: '01.03.2020',
-    finalDate:'18.07.2020',
     title: 'Item - 3',
     description: 'Totam rem aperiam, eaque ipsa quae ab illo inventore i  beatae vitae dicta sunt explicabo.',
     price: 500,
@@ -38,13 +60,24 @@ export default [
     model: 'BMW-X3',
     transmission: 'automatic',
     color: 'blue',
-    available: false
+    orders: [
+      {
+        id: '4',
+        startDate: moment(),
+        endDate: moment().add(1, 'days'),
+        status: 'reserved'
+      },
+      {
+        id: '5',
+        startDate: moment().add(10, 'days'),
+        endDate: moment().add(15, 'days'),
+        status: 'completed'
+      }
+    ]
   },
   {
     id: 4,
     image: 'https://bmw.kharkov.ua/files/images/units/big/bmw-x7.png',
-    startDate: '29.12.2020',
-    finalDate:'21.01.2021',
     title: 'Item - 4',
     description: 'Totam rem aperiam, eaque ipsa quae ab illo inventore i  beatae vitae dicta sunt explicabo.',
     price: 230,
@@ -52,13 +85,24 @@ export default [
     model: 'BMW-X7',
     transmission: 'automatic',
     color: 'black',
-    available: true
+    orders: [
+      {
+        id: '6',
+        startDate: moment(),
+        endDate: moment().add(1, 'days'),
+        status: 'reserved'
+      },
+      {
+        id: '7',
+        startDate: moment().add(13, 'days'),
+        endDate: moment().add(5, 'days'),
+        status: 'completed'
+      }
+    ]
   },
   {
     id: 5,
     image: 'https://bmw.kharkov.ua/files/images/units/big/bmw-x5.png',
-    startDate: '01.03.2020',
-    finalDate:'21.05.2020',
     title: 'Item -52',
     description: 'Totam rem aperiam, eaque ipsa quae ab illo inventore i  beatae vitae dicta sunt explicabo.',
     price: 698,
@@ -66,13 +110,24 @@ export default [
     model: 'BMW-X5',
     transmission: 'automatic',
     color: 'brown',
-    available: true
+    orders: [
+      {
+        id: '8',
+        startDate: moment(),
+        endDate: moment().add(1, 'days'),
+        status: 'reserved'
+      },
+      {
+        id: '9',
+        startDate: moment().add(8, 'days'),
+        endDate: moment().add(11, 'days'),
+        status: 'completed'
+      }
+    ]
   },
   {
     id: 6,
     image: 'https://bmw.kharkov.ua/files/images/units/big/bmw-x6.png',
-    startDate: '03.05.2020',
-    finalDate:'21.06.2020',
     title: 'Item -52',
     description: 'Totam rem aperiam, eaque ipsa quae ab illo inventore i  beatae vitae dicta sunt explicabo.',
     price: 698,
@@ -80,6 +135,19 @@ export default [
     model: 'BMW-X6',
     transmission: 'automatic',
     color: 'brown',
-    available: true
+    orders: [
+      {
+        id: '10',
+        startDate: moment(),
+        endDate: moment().add(1, 'days'),
+        status: 'reserved'
+      },
+      {
+        id: '11',
+        startDate: moment().add(10, 'days'),
+        endDate: moment().add(15, 'days'),
+        status: 'completed'
+      }
+    ]
   }
 ];

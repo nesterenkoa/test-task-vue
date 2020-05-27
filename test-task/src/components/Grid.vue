@@ -1,22 +1,27 @@
 <template>
-  <div>
-  <table v-if="loaded">
-      <tr>
-        <th class="column-name">Cars list:</th>
-        <th v-for="(day, i) in days" :key="i" class="column-name">
-          {{ day | moment }}
-        </th>
-      </tr>
-      <tr v-for="(car, i) in cars" :key="car.id" class="row">
-        <th class="row-name">{{car.model}}</th>
-        <td
-            v-for="(day, j) in days"
-            :key="j"
-            v-bind:class="getClass(grid[j][i])"
-        >
-          {{ grid[j][i] | order }}
-        </td>
-      </tr>
+  <div class="wrapper">
+    <table v-if="loaded">
+        <tr>
+          <th class="column-name">Cars:</th>
+          <th v-for="(day, i) in days" :key="i" class="column-name">
+            {{ day | moment }}
+          </th>
+        </tr>
+        <tr v-for="(car, i) in cars" :key="car.id" class="row">
+          <th
+              class="row-name"
+              :style="{ borderColor: car.color }"
+          >
+            {{car.model}}
+          </th>
+          <td
+              v-for="(day, j) in days"
+              :key="j"
+              :class="getClass(grid[j][i])"
+          >
+            {{ grid[j][i] | order }}
+          </td>
+        </tr>
     </table>
 </div>
 </template>
@@ -51,15 +56,31 @@ export default {
         case 'reserved':
           return 'cell reserved';
       }
-    }
+    },
   }
 }
 </script>
 
 <style scoped>
+.wrapper {
+  overflow-x: scroll;
+}
 .column-name {
   min-width: 30px;
   height: 20px;
+}
+
+.row-name{
+  position: sticky;
+  left: 0;
+  background:#e3ebfe ;
+  padding: 10px;
+  min-width: 85px;
+  border-left: 12px solid;
+}
+
+td{
+  background:#e3ebfe;
 }
 .cell {
   text-align: center;

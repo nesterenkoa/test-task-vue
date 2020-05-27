@@ -10,7 +10,7 @@
 
 <script>
   export default {
-    name: "TabsTable"
+    name: "TabsTable",
   }
 </script>
 

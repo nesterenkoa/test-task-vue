@@ -12,13 +12,14 @@
         </div>
 
         <p>{{days.length}} days selected</p>
-      </div>
 
-    <div class="wrapper">
-      <TabsTable  />
+
+    <!--<div class="wrapper">-->
+      <TabsTable :cars="cars"  />
       <Grid :days="days" :cars="cars" :grid="grid" />
     </div>
   </div>
+  <!--</div>-->
 </template>
 
 <script>
@@ -47,6 +48,11 @@
         cars,
         days: []
       }
+    },
+    created() {
+      const startDate = moment();
+      const endDate = moment().add(7, 'days');
+      this.range = [startDate, endDate]
     },
     watch: {
       range: function (current) {
